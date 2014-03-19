@@ -1,6 +1,6 @@
 {
   "name": "Awe-inspiring synonyms",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Awe-inspiring synonyms (for Americans)",
   "homepage_url": "http://guntlondon.com",
@@ -23,7 +23,7 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*"
+        "http://*/*", "https://*/*"
       ],
       "js": [
         "content_scripts/inject.js"
