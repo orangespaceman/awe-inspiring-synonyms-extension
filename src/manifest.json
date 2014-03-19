@@ -1,0 +1,34 @@
+{
+  "name": "Awe-inspiring synonyms",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Awe-inspiring synonyms (for Americans)",
+  "homepage_url": "http://guntlondon.com",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "browser_action": {
+    "default_title": "Toggle display of replaced words",
+    "default_icon": {
+        "19": "icons/19.png",
+        "38": "icons/38.png"
+    }
+  },
+  "background": {
+    "scripts": ["background/event.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*"
+      ],
+      "js": [
+        "content_scripts/inject.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
